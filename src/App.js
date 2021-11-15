@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import Battle from "./Pages/Battle"
+import Favorites from "./Pages/Favorites"
+import Home from './Pages/Home';
+import Popular from "./Pages/Popular"
+import Week from "./Pages/Week"
+import Error404 from './Pages/Error404';
+
+class App extends Component {
+  render() {
+    return (
+      <>
+        <BrowserRouter>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <Link to="/" className="nav-link">Home</Link>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <Link to="/weekly" className="nav-link">Weekly</Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="weekly-battle" className="nav-link">Weekly-Battle</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="popular">Popular</Link>
+                </li>
+
+              </ul>
+            </div>
+          </nav>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/weekly" component={Week}></Route>
+            <Route path="/weekly-battle" component={Battle}></Route>
+            <Route path="/popular" component={Popular}></Route>
+            <Route path="/favorites" component={Favorites}></Route>
+            <Route path="*" component={Error404}></Route>
+          </Switch>
+        </BrowserRouter>
+      </>
+    );
+  }
 }
 
 export default App;
