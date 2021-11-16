@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import "./App.css"
+
 import Battle from "./Pages/Battle"
 import Favorites from "./Pages/Favorites"
 import Home from './Pages/Home';
@@ -15,24 +17,24 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to="/" className="nav-link">Home</Link>
+          <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <Link to="/" className="nav-link text-white">Home</Link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <Link to="/weekly" className="nav-link">Weekly</Link>
+                  <Link to="/weekly" className="nav-link text-white">Weekly</Link>
                 </li>
                 <li class="nav-item">
-                  <Link to="weekly-battle" className="nav-link">Weekly-Battle</Link>
+                  <Link to="weekly-battle" className="nav-link text-white">Weekly-Battle</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="popular">Popular</Link>
+                  <Link className="nav-link text-white" to="popular">Popular</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="favorites">Favorites</Link>
+                  <Link className="nav-link text-white" to="favorites">Favorites</Link>
                 </li>
 
               </ul>
