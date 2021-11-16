@@ -5,10 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import "./App.css"
 
-import Battle from "./Pages/Battle"
+import Battle from "./Pages/PopularBattle"
 import Favorites from "./Pages/Favorites"
 import Home from './Pages/Home';
 import Popular from "./Pages/Popular"
+import PopularBattle from "./Pages/PopularBattle"
 import Week from "./Pages/Week"
 import Error404 from './Pages/Error404';
 
@@ -45,6 +46,7 @@ class App extends Component {
             <Route path="/weekly" component={Week}></Route>
             <Route path="/weekly-battle" component={Battle}></Route>
             <Route path="/popular" component={Popular}></Route>
+            <Route path="/popular-battle" component={PopularBattle}></Route>
             <Route path="/favorites" component={Favorites}></Route>
             <Route path="*" component={Error404}></Route>
           </Switch>

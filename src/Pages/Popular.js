@@ -24,15 +24,19 @@ class Popular extends Component {
 
 
     render() {
-        console.log(this.state.movies)
         return (
             <>
                 <h1>Popular</h1>
                 <div className="popular">
-                        {this.state.movies.map(movie => (
-                            <div className="popularity">
-                                <Card title={movie.title} image={`https://image.tmdb.org/t/p/w300/` + movie.poster_path} release={movie.release_date} description={movie.overview} />
-                            </div>
+                    {this.state.movies.map(movie => (
+                        <div className="popularity">
+                            <Card
+                             title={movie.title} 
+                             image={`https://image.tmdb.org/t/p/w300/` + movie.poster_path} 
+                             release={movie.release_date} 
+                             description={movie.overview}
+                            />
+                        </div>
                     ))}
                 </div>
             </>

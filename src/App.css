@@ -13,10 +13,11 @@ body {
   width          : 100%;
 }
 
-.popularity{
-  display: flex;
+.popularity {
+  display       : flex;
   flex-direction: column;
-  width: 30%;
+  width         : 30%;
+  height        : 100%;
 }
 
 .card {
@@ -28,14 +29,27 @@ body {
 
 
 h1 {
-  text-align: center;
-  color: white;
-  font-size: 60px;
+  text-align   : center;
+  color        : white;
+  font-size    : 60px;
   margin-bottom: 40px;
 }
 
 h5,
 p {
+  font-size: 14px;
   color     : white;
   box-shadow: 10px 10px 10px black;
+}
+
+.sessionEnd {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  align-items: center;
+}
+
+.sessionEnd h2 {
+  font-size: 70px;
+  color: white;
 }
