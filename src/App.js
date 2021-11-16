@@ -31,6 +31,9 @@ class App extends Component {
                 <li class="nav-item">
                   <Link className="nav-link" to="popular">Popular</Link>
                 </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="favorites">Favorites</Link>
+                </li>
 
               </ul>
             </div>
